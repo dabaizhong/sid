@@ -1,0 +1,31 @@
+{
+  "method": "LETTER",
+  "dataset": "Yelp",
+  "state": "ready",
+  "source": "author_published_sid",
+  "sid_sha256": "7468278b33ae2174c0d230d5e49d0c93e1dedd9cdc8c5f58c983574c14a62b2b",
+  "id_base": 0,
+  "users": 30431,
+  "missing_interaction_items": 0,
+  "items": 20033,
+  "lengths": [
+    4
+  ],
+  "unique_codes": 19201,
+  "collision_items": 1247,
+  "max_bucket": 65,
+  "used_per_position": [
+    256,
+    256,
+    256,
+    256
+  ],
+  "upstream": {
+    "url": "https://github.com/HonghuiBao2000/LETTER.git",
+    "commit": "8d0154e28de37dbb6e24871c508ad8ddb1921cda"
+  },
+  "array_row_base": 0,
+  "item_id_kind": "author_internal_id",
+  "code_values": "raw per-position integers; no token-vocabulary offsets applied",
+  "exported_sid_sha256": "392b3964d6f51fa3d066c47453347d367aec9f0c02062142e48320c5b5052136"
+}

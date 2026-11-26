@@ -1,0 +1,55 @@
+{
+  "method": "ETEGRec",
+  "dataset": "instrument",
+  "state": "ready",
+  "source": "author_pretrained_rqvae_initialization",
+  "id_base": 1,
+  "embedding_row_offset": -1,
+  "checkpoint_sha256": "bfb8a08173d88fa471c683d0a56319be36b0433b22c20d82109755048a4a44a8",
+  "embedding_sha256": "ef0dc71646baaab06b7faf2e4755c7b73e43d33da749698c8c68d4b27cad22b6",
+  "mapping_sha256": "474d270adb9e4d8503df117d196950efc167675937af78d034ae58a33025a0e8",
+  "prefix_stats": {
+    "items": 24587,
+    "lengths": [
+      3
+    ],
+    "unique_codes": 24457,
+    "collision_items": 233,
+    "max_bucket": 24,
+    "used_per_position": [
+      256,
+      256,
+      256
+    ]
+  },
+  "full_sid_stats": {
+    "items": 24587,
+    "lengths": [
+      4
+    ],
+    "unique_codes": 24587,
+    "collision_items": 0,
+    "max_bucket": 1,
+    "used_per_position": [
+      256,
+      256,
+      256,
+      24
+    ]
+  },
+  "split_counts": {
+    "train": 339519,
+    "valid": 57439,
+    "test": 57439
+  },
+  "missing_interaction_items": 0,
+  "note": "Initial tokenizer snapshot; joint ETEGRec training updates codes.",
+  "upstream": {
+    "url": "https://github.com/RUCAIBox/ETEGRec.git",
+    "commit": "945d000af19e47254e1310937ac32ea8222e2739"
+  },
+  "array_row_base": 0,
+  "item_id_kind": "Amazon_ASIN",
+  "code_values": "raw per-position integers; no token-vocabulary offsets applied",
+  "exported_sid_sha256": "2488f1e604e42fba2776fe22890228783f0cd8a4b45dafcd60d2a7e64791dc95"
+}

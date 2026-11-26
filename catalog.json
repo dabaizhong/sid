@@ -1,0 +1,74 @@
+[
+  {
+    "method": "LETTER",
+    "dataset": "Beauty",
+    "items": 12101,
+    "code_length": 4,
+    "unique_codes": 12088,
+    "collision_items": 24,
+    "path": "LETTER/Beauty"
+  },
+  {
+    "method": "LETTER",
+    "dataset": "Instruments",
+    "items": 9922,
+    "code_length": 4,
+    "unique_codes": 9897,
+    "collision_items": 48,
+    "path": "LETTER/Instruments"
+  },
+  {
+    "method": "LETTER",
+    "dataset": "Yelp",
+    "items": 20033,
+    "code_length": 4,
+    "unique_codes": 19201,
+    "collision_items": 1247,
+    "path": "LETTER/Yelp"
+  },
+  {
+    "method": "ETEGRec",
+    "dataset": "instrument",
+    "items": 24587,
+    "code_length": 4,
+    "unique_codes": 24587,
+    "collision_items": 0,
+    "path": "ETEGRec/instrument"
+  },
+  {
+    "method": "ETEGRec",
+    "dataset": "scientific",
+    "items": 25848,
+    "code_length": 4,
+    "unique_codes": 25848,
+    "collision_items": 0,
+    "path": "ETEGRec/scientific"
+  },
+  {
+    "method": "ETEGRec",
+    "dataset": "game",
+    "items": 25612,
+    "code_length": 4,
+    "unique_codes": 25612,
+    "collision_items": 0,
+    "path": "ETEGRec/game"
+  },
+  {
+    "method": "RPG",
+    "dataset": "Beauty",
+    "items": 12101,
+    "code_length": 32,
+    "unique_codes": 12098,
+    "collision_items": 6,
+    "path": "RPG/Beauty"
+  },
+  {
+    "method": "LIGER",
+    "dataset": "Beauty",
+    "items": 12101,
+    "code_length": 4,
+    "unique_codes": 12101,
+    "collision_items": 0,
+    "path": "LIGER/Beauty"
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "method": "LETTER",
+  "dataset": "Instruments",
+  "state": "ready",
+  "source": "author_published_sid",
+  "sid_sha256": "33c87e28c52ae367985bdf494cb49d676d181e13a39497b4ad035f46111546dd",
+  "id_base": 0,
+  "users": 24772,
+  "missing_interaction_items": 0,
+  "items": 9922,
+  "lengths": [
+    4
+  ],
+  "unique_codes": 9897,
+  "collision_items": 48,
+  "max_bucket": 3,
+  "used_per_position": [
+    150,
+    256,
+    256,
+    256
+  ],
+  "upstream": {
+    "url": "https://github.com/HonghuiBao2000/LETTER.git",
+    "commit": "8d0154e28de37dbb6e24871c508ad8ddb1921cda"
+  },
+  "array_row_base": 0,
+  "item_id_kind": "author_internal_id",
+  "code_values": "raw per-position integers; no token-vocabulary offsets applied",
+  "exported_sid_sha256": "0ca70e0a202206b07d30965b34e18e1ff1538bfbd1044131991df64ccc9cc8e4"
+}

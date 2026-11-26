@@ -1,0 +1,48 @@
+{
+  "state": "ready",
+  "method": "LIGER",
+  "dataset": "Beauty",
+  "variant": "sentence-t5-xxl",
+  "epochs": 8000,
+  "id_base": 1,
+  "row_offset": -1,
+  "prefix_stats": {
+    "items": 12101,
+    "lengths": [
+      3
+    ],
+    "unique_codes": 11748,
+    "collision_items": 672,
+    "max_bucket": 5,
+    "used_per_position": [
+      256,
+      256,
+      256
+    ]
+  },
+  "sid_stats": {
+    "items": 12101,
+    "lengths": [
+      4
+    ],
+    "unique_codes": 12101,
+    "collision_items": 0,
+    "max_bucket": 1,
+    "used_per_position": [
+      256,
+      256,
+      256,
+      5
+    ]
+  },
+  "embedding_sha256": "7e72830ee55315a22a9f98dd199a90561c7637a6c2fe5745c9b4f0e5726f426e",
+  "tokenizer_sha256": "0414596bd4a771c36384886f9ebcadfd4ca44d9fddbac480d50c433df0f826ea",
+  "upstream": {
+    "url": "https://github.com/facebookresearch/liger.git",
+    "commit": "b6ccc37af5ee623ddc1d1ead3490c31aaeaf4524"
+  },
+  "array_row_base": 0,
+  "item_id_kind": "Amazon_ASIN",
+  "code_values": "raw per-position integers; no token-vocabulary offsets applied",
+  "exported_sid_sha256": "854182e879c0ef6dd1349ed15120bbde4fba9d6dddb2905b7ffa9ac461984c70"
+}

@@ -1,0 +1,18 @@
+{
+  "RPG": {
+    "url": "https://github.com/facebookresearch/RPG_KDD2025.git",
+    "commit": "7dcf95ce9e08601810efdd1c850ed6dada5f97c2"
+  },
+  "LETTER": {
+    "url": "https://github.com/HonghuiBao2000/LETTER.git",
+    "commit": "8d0154e28de37dbb6e24871c508ad8ddb1921cda"
+  },
+  "ETEGRec": {
+    "url": "https://github.com/RUCAIBox/ETEGRec.git",
+    "commit": "945d000af19e47254e1310937ac32ea8222e2739"
+  },
+  "LIGER": {
+    "url": "https://github.com/facebookresearch/liger.git",
+    "commit": "b6ccc37af5ee623ddc1d1ead3490c31aaeaf4524"
+  }
+}

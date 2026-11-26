@@ -1,0 +1,31 @@
+{
+  "method": "LETTER",
+  "dataset": "Beauty",
+  "state": "ready",
+  "source": "author_published_sid",
+  "sid_sha256": "be3fb890e59b5443824cdebc560ef349191b97f20d3aecad4727de2d6b212c82",
+  "id_base": 0,
+  "users": 22363,
+  "missing_interaction_items": 0,
+  "items": 12101,
+  "lengths": [
+    4
+  ],
+  "unique_codes": 12088,
+  "collision_items": 24,
+  "max_bucket": 3,
+  "used_per_position": [
+    197,
+    256,
+    256,
+    256
+  ],
+  "upstream": {
+    "url": "https://github.com/HonghuiBao2000/LETTER.git",
+    "commit": "8d0154e28de37dbb6e24871c508ad8ddb1921cda"
+  },
+  "array_row_base": 0,
+  "item_id_kind": "author_internal_id",
+  "code_values": "raw per-position integers; no token-vocabulary offsets applied",
+  "exported_sid_sha256": "3fbe612dce9f60f814b250ac85268128f354fa6cd67b5a132b0b40e2db41f30e"
+}
