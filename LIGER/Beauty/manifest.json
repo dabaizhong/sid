@@ -44,5 +44,32 @@
   "array_row_base": 0,
   "item_id_kind": "Amazon_ASIN",
   "code_values": "raw per-position integers; no token-vocabulary offsets applied",
-  "exported_sid_sha256": "854182e879c0ef6dd1349ed15120bbde4fba9d6dddb2905b7ffa9ac461984c70"
+  "exported_sid_sha256": "854182e879c0ef6dd1349ed15120bbde4fba9d6dddb2905b7ffa9ac461984c70",
+  "embedding_files": {
+    "embeddings.npy": {
+      "shape": [
+        12101,
+        768
+      ],
+      "dtype": "float32",
+      "description": "Sentence-T5-XXL final L2-normalized text embeddings",
+      "bytes": 37174400,
+      "sha256": "7e72830ee55315a22a9f98dd199a90561c7637a6c2fe5745c9b4f0e5726f426e"
+    },
+    "embeddings_standardized.npy": {
+      "shape": [
+        12101,
+        768
+      ],
+      "dtype": "float32",
+      "description": "StandardScaler-transformed embeddings used by the local LIGER and RQ-VAE runs",
+      "bytes": 37174400,
+      "sha256": "5af6b1fa3ded56d858e334dac8113835e72bedb02b7e6b4e6b20c489ac3c8693"
+    }
+  },
+  "standardization": {
+    "parameters": "standardization.npz",
+    "fitted_on": "all 12101 catalog item text embeddings, matching upstream preprocessing",
+    "formula": "(embeddings - mean) / scale"
+  }
 }

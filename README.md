@@ -50,6 +50,28 @@ Use ASINs where available. LETTER retains author internal item IDs.
 
 For LIGER, the large text encoder was evaluated layer by layer to fit a 6GB GPU. Final vectors were checked against ordinary Hugging Face forward outputs on reference items (minimum cosine similarity 0.99999976).
 
+## Beauty 768-dimensional text vectors
+
+`LIGER/Beauty/` also contains the cached Sentence-T5-XXL vectors generated on the local RTX 3060:
+
+| File | Shape / dtype | Use |
+|---|---|---|
+| `embeddings.npy` | `(12101, 768)`, float32 | Original final L2-normalized Sentence-T5-XXL text vectors |
+| `embeddings_standardized.npy` | `(12101, 768)`, float32 | Standardized vectors consumed by our LIGER / RQ-VAE training |
+| `standardization.npz` | mean, scale, var | Numeric StandardScaler parameters; no pickle loading required |
+| `encoder_check.json` | JSON | Reference-forward consistency check |
+
+Both vector files have **exactly the same row order** as `LIGER/Beauty/sid.npy`, `item_ids.json` and `internal_ids.json`. Row 0 is the first real item, not padding. Each `.npy` vector file is 37,174,400 bytes (about 35.5 MiB). Use the standardized file for the matching LIGER run; do not standardize it again. To join with another method's SID table, match item identifiers rather than assuming identical row order.
+
+The encoder was evaluated in mixed precision and its output cached as float32. The original normalization is preserved byte-for-byte; vector norms can differ from 1 by FP16 rounding (less than 0.001).
+
+```python
+root = Path("LIGER/Beauty")
+text_vectors = np.load(root / "embeddings.npy", allow_pickle=False)
+liger_vectors = np.load(root / "embeddings_standardized.npy", allow_pickle=False)
+# Optional PyTorch conversion: torch.from_numpy(liger_vectors)
+```
+
 ## Sources and attribution
 
 - LETTER: https://github.com/HonghuiBao2000/LETTER
@@ -66,4 +88,4 @@ pip install numpy
 python verify.py
 ```
 
-`SHA256SUMS.json` provides checksums for the packaged files. This repository contains SID assets and loading utilities; model weights, user interaction logs and user identifier mappings are not included.
+`SHA256SUMS.json` provides checksums for the packaged files. This repository contains SID assets, cached Beauty text embeddings and loading utilities; model weights, user interaction logs and user identifier mappings are not included.

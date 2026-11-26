@@ -1,5 +1,5 @@
 {
-  ".gitattributes": "aa6a8f3d80bc3597d903b066fc77dce94e02612b469e4837cd3b458f5b6bc00a",
+  ".gitattributes": "2891ecabc5299b08a29f3aebd21f04b0839a4257976d89a285e78b7bfc77a602",
   ".gitignore": "5297b35c3ad3414b28f0bd55b8d357dfe33fb0e320581ff5b130a3efbf432720",
   "catalog.json": "7ce1a4159c5b3443bbb717e1b1133a98e4d48b7d40fcb9b2ecd422ea80119dfb",
   "ETEGRec/game/internal_ids.json": "8db33ca7819556f18cf57df7e4a9e007a1e7be86a7d220e5d6fcad93ef7e4e37",
@@ -41,13 +41,17 @@
   "LETTER/Yelp/manifest.json": "802037240d6b2b447477648a0d089ddb87800b2b05ec869880aab4109cee9408",
   "LETTER/Yelp/sid.npy": "392b3964d6f51fa3d066c47453347d367aec9f0c02062142e48320c5b5052136",
   "LETTER/Yelp/sid_to_items.json": "6e5a6be8986fe4dd3922ae0af31d1c65b824bbdaf48e2cff388870609816c5db",
+  "LIGER/Beauty/embeddings.npy": "7e72830ee55315a22a9f98dd199a90561c7637a6c2fe5745c9b4f0e5726f426e",
+  "LIGER/Beauty/embeddings_standardized.npy": "5af6b1fa3ded56d858e334dac8113835e72bedb02b7e6b4e6b20c489ac3c8693",
+  "LIGER/Beauty/encoder_check.json": "7951c5a259d5a55accf161d5d4f67bf20714407b2e2ec04393e90032c03cc671",
   "LIGER/Beauty/internal_ids.json": "7cf6098cab1fde116a57e879079a3080b86c601e783016f7cb7b0131344907aa",
   "LIGER/Beauty/item_ids.json": "38191ccc96dba6cd254cfe18f3fdabf3d4b89ceeb5b5a0df0ecf59a3b8f53ff1",
   "LIGER/Beauty/item_to_sid.json": "8d315dbff6ddd50e48b2fb81f3f7678558d954d5d52973cbfea6dded1d4f0ae7",
-  "LIGER/Beauty/manifest.json": "7be81f731fbf60b07cb7a901115a4b4e914d287e8c5674dc2757abd4148412c0",
+  "LIGER/Beauty/manifest.json": "cad4881040c4c7430c405119dd0e2c9f5bfdaa4c46f024ed43a9ac65ce5115dc",
   "LIGER/Beauty/sid.npy": "854182e879c0ef6dd1349ed15120bbde4fba9d6dddb2905b7ffa9ac461984c70",
   "LIGER/Beauty/sid_to_items.json": "5ad924a35ec76f7cbad53a4bfb6a86756dbc1a2ad11a051cb9888dda82308033",
-  "README.md": "8fd535c0eb39aa92da31e10f8d2e82e1f1143fcf8f4e8eaa8d9555ff8af21da6",
+  "LIGER/Beauty/standardization.npz": "093e69c3aedf06d72c6b43d1fb06848ac5474856dc0d0e0d534d8c0157fcb26c",
+  "README.md": "0cf6febaa56e844fb0990663947c88030393127730e68eee48b81e9a161d2a8f",
   "requirements.txt": "10c15aac265c81bc342ff09fc08510682971c81a4f24ff649cc0f7ae4f9bb278",
   "RPG/Beauty/internal_ids.json": "7cf6098cab1fde116a57e879079a3080b86c601e783016f7cb7b0131344907aa",
   "RPG/Beauty/item_ids.json": "38191ccc96dba6cd254cfe18f3fdabf3d4b89ceeb5b5a0df0ecf59a3b8f53ff1",
@@ -58,5 +62,5 @@
   "sources.json": "892fd4c3d2f3defc2ce5faa1b9bcec6aab7a57b4f760d2f63aaf52c885a0bf48",
   "upstream_licenses/LIGER.txt": "c3c410f2f03b870bc2bebc580e6510032a9e86b00f07317bbc1a83fa6bfc5509",
   "upstream_licenses/RPG.txt": "f7dff359f5caaec0e6aa991cfaa9dc52224113ff8fd17d090aef1ec446bab2dd",
-  "verify.py": "fceed710e65611628cb2444d17562310c0c99690f01dc1771c4472d74a088ada"
+  "verify.py": "fb9760a72595f01655208f4f28b7f4a0a4577b7a34629be4290f86075478f62b"
 }
