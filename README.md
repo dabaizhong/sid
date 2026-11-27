@@ -72,6 +72,17 @@ liger_vectors = np.load(root / "embeddings_standardized.npy", allow_pickle=False
 # Optional PyTorch conversion: torch.from_numpy(liger_vectors)
 ```
 
+## Trained LIGER Beauty checkpoint
+
+The locally reproduced **9.09M-parameter LIGER, seed 42** is available at
+[`LIGER/Beauty/checkpoints/seed42/`](LIGER/Beauty/checkpoints/seed42/).
+The selected checkpoint is step **102,580**, epoch **230**, chosen by full
+validation Dense NDCG@10. It uses this repository's Beauty SIDs and standardized
+768-dimensional vectors. In-set hybrid K20 Recall@10 / NDCG@10 are
+**0.07823972 / 0.04128175**. Full metrics, configuration, loading code and the
+cold-start results are included in that folder. This is a local reproduction,
+not an author-released checkpoint.
+
 ## Sources and attribution
 
 - LETTER: https://github.com/HonghuiBao2000/LETTER
@@ -88,4 +99,4 @@ pip install numpy
 python verify.py
 ```
 
-`SHA256SUMS.json` provides checksums for the packaged files. This repository contains SID assets, cached Beauty text embeddings and loading utilities; model weights, user interaction logs and user identifier mappings are not included.
+`SHA256SUMS.json` provides checksums for the packaged files. This repository contains SID assets, cached Beauty text embeddings, the locally trained LIGER Beauty checkpoint and loading utilities; user interaction logs and user identifier mappings are not included.

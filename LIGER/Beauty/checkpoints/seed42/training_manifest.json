@@ -1,0 +1,114 @@
+{
+  "dataset": {
+    "type": "Amazon",
+    "name": "Beauty",
+    "raw_data_path": "./ID_generation/preprocessing/raw_data/",
+    "processed_data_path": "./ID_generation/preprocessing/processed/",
+    "max_items_per_seq": 20,
+    "features_needed": [
+      "title",
+      "price",
+      "brand",
+      "categories"
+    ],
+    "content_model": "sentence-t5-xxl",
+    "prompt_format": "amazon",
+    "RQ-VAE": {
+      "optimizer": "AdamW",
+      "weight_decay": 0.1,
+      "batch_size": 2048,
+      "epochs": 8000,
+      "lr": 0.001,
+      "beta": 0.25,
+      "input_dim": 768,
+      "hidden_dim": [
+        768,
+        512,
+        256
+      ],
+      "latent_dim": 128,
+      "num_layers": 3,
+      "dropout": 0.1,
+      "code_book_size": 256,
+      "max_seq_len": 256,
+      "val_ratio": 0.05
+    },
+    "TIGER": {
+      "n_positions": 102,
+      "save_every_n_epochs": 10,
+      "T5": {
+        "encoder_layers": 6,
+        "decoder_layers": 6,
+        "d_model": 128,
+        "d_ff": 1024,
+        "num_heads": 6,
+        "d_kv": 64,
+        "dropout_rate": 0.2,
+        "feed_forward_proj": "relu",
+        "initializer_factor": 0.02
+      },
+      "trainer": {
+        "steps": 200000,
+        "lr": 0.0003,
+        "patience": 50,
+        "scheduler": "cosine",
+        "warmup_steps": 10000,
+        "weight_decay": 0.035,
+        "batch_size": 256,
+        "eval_batch_size": 32,
+        "eval_frequence": 10
+      }
+    }
+  },
+  "method": {
+    "include_user_id": false,
+    "use_id": "sid",
+    "flag_add_input_embedding": true,
+    "flag_use_output_embedding": true,
+    "embedding_loss_weight": 1,
+    "sid_loss_weight": 1,
+    "evaluation_method": "dense",
+    "embedding_head_dict": {
+      "use_new_init": false,
+      "embed_target": "ground_truth",
+      "embed_proj_type": "mlp",
+      "normalize_logits": true,
+      "logits_temperature": 0.07,
+      "text_embedding_dim": 768,
+      "hidden_sizes": [
+        256,
+        512,
+        768
+      ],
+      "embd_proj_dropout_rate": 0.5,
+      "embd_proj_in_dropout_rate": 0.2
+    }
+  },
+  "seed": 42,
+  "parameters": 9089536,
+  "train_samples": 114104,
+  "validation_in_set": 22295,
+  "steps_per_epoch": 446,
+  "mode": "official_recipe",
+  "max_steps": 200000,
+  "changes": [
+    "compact batch materialization with same values/order",
+    "Conv1d residual -> Linear",
+    "FP32 normalized dense inner product: broadcast multiply/sum -> GEMM; numerical equivalence checked",
+    "compact IDs cached on GPU; reduced host synchronizations; default upstream AdamW retained",
+    "training validation computes full dense selection metric; unused gen diagnostic omitted",
+    "strict stop at step200000 instead of completing extra final epoch"
+  ],
+  "static_positions": 102,
+  "projection_order": "repeat4 then dropout MLP",
+  "optimizer": "upstream default AdamW; fused probe not adopted",
+  "scheduler": "transformers.get_scheduler, no restarts",
+  "precision": "upstream FP16 model_forward; FP32 dense head outside autocast",
+  "selection": "full in-set validation Dense NDCG@10; every10 epochs; official patience condition",
+  "source_sha256": {
+    "src\\tiger.py": "999d506923143520accacb15aacd4466863eecd7d566d8a5999e9e41fc4c9a6b",
+    "src\\evaluation.py": "ab9b49948ec0e0a8b395e95e6035c9458b10246e1507429a1bcc8fdbaf5ca439",
+    "src\\training.py": "b0b1eba23fcd515e18bc9b65a72daebdf505acd9239fadfb8a54211cf4cec135",
+    "configs\\dataset\\amazon.yaml": "216d28fb48991faaef1bbb8f4af89b358e677901ea72ee84da9b862b77da91bf"
+  }
+}

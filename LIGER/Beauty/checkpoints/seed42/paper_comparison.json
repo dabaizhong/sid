@@ -1,0 +1,42 @@
+{
+  "completed": true,
+  "selection": "full-validation dense NDCG@10",
+  "best_step": 102580,
+  "best_epoch": 230,
+  "stopped_step": 125326,
+  "stop_reason": "official_patience",
+  "total_seconds": 32300.15855219995,
+  "in_set_95pct_target_passed": true,
+  "comparisons": [
+    {
+      "slice": "in_set",
+      "K": 20,
+      "Recall10": 0.07823971893157966,
+      "NDCG10": 0.04128175228834152,
+      "paper_Recall10": 0.07447,
+      "paper_NDCG10": 0.0402,
+      "relative_Recall_pct": 5.062063826480023,
+      "relative_NDCG_pct": 2.6909260904018018
+    },
+    {
+      "slice": "in_set",
+      "K": 80,
+      "Recall10": 0.0841403540381064,
+      "NDCG10": 0.043756596744060516,
+      "paper_Recall10": 0.08343,
+      "paper_NDCG10": 0.04392,
+      "relative_Recall_pct": 0.8514371786005004,
+      "relative_NDCG_pct": -0.37204748620101036
+    },
+    {
+      "slice": "cold",
+      "K": 20,
+      "Recall10": 0.08641975308641975,
+      "NDCG10": 0.03116665594279766,
+      "paper_Recall10": 0.10082,
+      "paper_NDCG10": 0.038,
+      "relative_Recall_pct": -14.283125286233144,
+      "relative_NDCG_pct": -17.98248436105878
+    }
+  ]
+}
